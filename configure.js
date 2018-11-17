@@ -1,4 +1,4 @@
-var queryURL = "cashmusic.org/venuses/" + userInput
+var queryURL = "cashmusic.org/venues/" + userInput
 ajax({
     url: queryURL,
     method: "GET"
