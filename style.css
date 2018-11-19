@@ -120,15 +120,16 @@ ul {
 }
 
 .loaded #search {
-   background: #e3e3e3 url('https://static-cashmusic.netdna-ssl.com/venues/img/background.jpg');
-   background-width: 100%;
-   background-repeat: no-repeat;
-   background-position: center top;
-   background-attachment: fixed;
-   -webkit-background-size: cover;
-   -moz-background-size: cover;
-   -o-background-size: cover;
-   background-size: cover;
+    background: url('images/foxtheater.jpg');
+    /* background: #e3e3e3 url('https://static-cashmusic.netdna-ssl.com/venues/img/background.jpg'); */
+    background-width: 100%;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 #search {
