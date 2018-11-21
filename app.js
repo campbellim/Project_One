@@ -14,7 +14,7 @@ $(document).ready(function() {
  
           if ($("#keyword").val() != ""){
             var queryURL = "cashmusic.org/venues/" + userInput
-            ajax({
+            $.ajax({
                 url: queryURL,
                 method: "GET"
                  
@@ -23,7 +23,7 @@ $(document).ready(function() {
             .done(function(response){
                 var results= response.data
                 results['results']
-            })
+            });
              var userInput = $('#keyword').val();
           }
           else if (dirs != "") {
