@@ -19,7 +19,7 @@
 
 <body class="loaded venue">
     <header>
-        <h1 class="logo"><a href="/"><svg version="1.1" id="Layer_22" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        <h1 class="logo"><a href="javascript:window.location.href=window.location.href"><svg version="1.1" id="Layer_22" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                     x="0px" y="0px" width="240.958px" height="240.732px" viewBox="0 0 240.958 240.732"
                     enable-background="new 0 0 240.958 240.732" xml:space="preserve">
                     <title>Entertain Me</title>
@@ -50,12 +50,62 @@
     </div>
 
     <footer>
-        <p>© 2018 Happy Apples Never Surrender. Photo by <a href="https://www.flickr.com/photos/axlright/" target="_blank">Alex
-                Wright (pending change?)</a></p>
+        <p>© 2018 Happy Apples Never Surrender</p>
     </footer>
 
+    <!-- Move this to app.js later... -->
+    <!-- Start -->
+    <script>
+        $(document).ready(function(){
+        var header = $('body');
+        
+        var backgrounds = new Array(
+            'url(images/foxtheater.jpg)'
+          , 'url(images/673329.jpg)'
+          , 'url(images/calatrava.jpg)'
+          , 'url(images/fox_inside.jpg)'
+          , 'url(images/Hollywood-Bowl-Fireworks.jpg)'
+          , 'url(images/jsdgfvadshg.jpg)'
+          , 'url(images/nyc.jpg)'
+          , 'url(images/orange.jpg)'
+          , 'url(images/spikey.jpg)'
+          , 'url(images/stage.jpg)'
+          , 'url(images/timessquare.jpg)'
+        );
+        
+        var current = 0;
+        
+        function nextBackground() {
+            current++;
+            current = current % backgrounds.length;
+            header.css('background-image', backgrounds[current]);
+            header.css('background-width', '100%');
+            header.css('height', '100%');
+            header.css('background-repeat', 'no-repeat');
+            header.css('background-position', 'center top');
+            header.css('background-attachment', 'fixed');
+            header.css('-webkit-background-size', 'cover');
+            header.css('-moz-background-size', 'cover');
+            header.css('-o-background-size', 'cover');
+            header.css('background-size', 'cover');
+        }
+        setInterval(nextBackground, 4500);
 
-
+        // setInterval(function(){console.log("hello");}, 3000);
+        
+        header.css('background-image', backgrounds[0]);
+        header.css('background-width', '100%');
+        header.css('height', '100%');
+        header.css('background-repeat', 'no-repeat');
+        header.css('background-position', 'center top');
+        header.css('background-attachment', 'fixed');
+        header.css('-webkit-background-size', 'cover');
+        header.css('-moz-background-size', 'cover');
+        header.css('-o-background-size', 'cover');
+        header.css('background-size', 'cover');
+        });
+    </script>
+    <!-- Finish. -->
 
 </body>
 
